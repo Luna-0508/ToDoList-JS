@@ -13,6 +13,11 @@ while (input !== "quit" && input !== "q") {
     const newTodo = prompt("Ok, what is the new todo?");
     todos.push(newTodo);
     console.log(`${newTodo} added to a list!`);
+  } else if (input === "delete") {
+    const index = prompt("Ok, enter an index to delete:");
+    parseInt(index);
+    const deleted = todos.splice(index, 1);
+    console.log(`Ok, deleted ${deleted[0]}`);
   }
 
   input = prompt("What would you like to do?");
